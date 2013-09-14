@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block body %}
+	<h2>Videos</h2>
+	<video width="320" height="240" controls="controls" autoplay="autoplay"></video>
+	<ul>
+		{% for video in videos %}
+			<li><a href="javascript:void(0);" onclick="playVideo('{{video}}')">{{video}}</a></li>
+		{% endfor %}
+	</ul>
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			Results:
+			<pre>
+				{% for message in messages %}
+{{message}}
+				{% endfor %}
+			</pre>
+		{% endif %}
+	{% endwith %}
+	<script type="text/javascript">
+		function playVideo(video){
+			$('video').attr('src', '/static/video/'+video);
+		}
+	</script>
+{% endblock %}
+{% block nav %}
+<li><a href="{{url_for('index')}}">back</a></li>
+{% endblock %}

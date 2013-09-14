@@ -1,2 +1,10 @@
 # Please put answers for the week2 stand alone questions here
-# Name:
+# Name:Ethan Puzarne
+
+3 Similar web apps:
+1. Using the video tag we could accomplish the same task playing videos rather than music
+2. Using the img tag, we could build a site to display images as you click on their names.  Or better, we could have the jquery load an image in the place of the link allowing you to view as many or few as you want
+3. We could make the audio files play in order automatically so that the user doesn't have to click each one.
+
+
+I tried to implement the video site, but the .mov I used doesn't want to play.
